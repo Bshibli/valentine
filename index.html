@@ -454,16 +454,17 @@
 
 
     // IMPORTANT: on mobile/touch, prevent "ghost click" hitting YES underneath
-   noBtn.addEventListener("pointerdown", (e) => {
+ noBtn.addEventListener("pointerdown", (e) => {
   e.preventDefault();
   e.stopPropagation();
 
   if(!noClickedOnce){
     noClickedOnce = true;
-    fadeInMusic();
     showResult("YEAH NICE TRY PUNK LOGGING😭💗");
   }
 }, { passive: false });
+
+
 
     // also block click bubbling (extra safety)
 noBtn.addEventListener("click", (e) => {
